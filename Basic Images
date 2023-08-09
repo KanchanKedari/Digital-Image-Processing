@@ -1,0 +1,25 @@
+%To create 2-D digital image
+clc;
+close all;
+clear all;
+figure(1);
+I = [0,1,0,1,0,1,0,1;1,0,1,0,1,0,1,0;0,1,0,1,0,1,0,1;1,0,1,0,1,0,1,0;0,1,0,1,0,1,0,1;1,0,1,0,1,0,1,0;0,1,0,1,0,1,0,1;1,0,1,0,1,0,1,0]
+subplot(2,2,1);
+imshow(I);
+title('Chess Board');
+
+I2 = [0,1,0,0,0;0,1,1,1,0;0,1,0,0,0,;0,1,1,1,0;0,1,0,0,0];
+subplot(2,2,2);   %subplot(row,column,position)
+imshow(I2);
+title('The Thirteen');
+
+I3 = [0,1,0,0,0;0,1,0,1,1;0,0,0,0,0;1,1,0,1,0;0,0,0,1,0];
+subplot(2,2,3)
+imshow(I3);
+title('Swastik');
+
+%Using the normalised value to get different shades of grey
+I4 = [0,0.1,0.2,0.4;0.1,0.2,0.4,0.6;0.2,0.4,0.6,0.8;0.4,0.6,0.8,0.9;0.6,0.8,0.9,1];
+subplot(2,2,4);
+imshow(I4);
+title('Grey Scale Image')
