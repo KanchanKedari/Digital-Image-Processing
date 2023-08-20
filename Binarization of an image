@@ -1,0 +1,37 @@
+I = imread('peppers.png'); 
+imshow(I);
+R = I(:,:,1);
+G = I(:,:,2);
+B = I(:,:,3); 
+
+figure(1);
+subplot(2,2,1);
+imshow(I);
+title('Main Image');
+subplot(2,2,2);
+imshow(R);
+title('Red Channel');
+subplot(2,2,3);
+imshow(G);
+title('Green Channel');
+subplot(2,2,4);
+imshow(B);
+title('Blue Channel');
+
+%Binarization 
+Rbin = imbinarize(R);
+Gbin = imbinarize(G);
+Bbin = imbinarize(B);
+figure(2);
+subplot(2,2,1);
+imshow(I);
+title('Main Image');
+subplot(2,2,2);
+imshow(Rbin);
+title('Red Binarized Channel');
+subplot(2,2,3);
+imshow(Gbin);
+title('Green Binarized Channel');
+subplot(2,2,4);
+imshow(Bbin);
+title('Blue Binarized Channel');
